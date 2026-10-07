@@ -1,6 +1,0 @@
-s = input("Digite uma cadeia de caracteres: ")
-a = s.lower()
-c = a.count('a')
-t = s.replace('a', '').replace('A', '')
-print(t)
-print("Número de vezes que a letra 'a' aparece:", c)
