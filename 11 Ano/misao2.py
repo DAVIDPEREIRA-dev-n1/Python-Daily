@@ -26,20 +26,6 @@ class Pilha:
     
 #Programa principal
 
-texto = input("Escreva uma palavra ou frase: ")
-pilha_texto = Pilha()
-
-for caractere in texto:
-    pilha_texto.push(caractere)
-
-texto_invertido = ""    
-while not pilha_texto.is_empty():
-    texto_invertido += pilha_texto.pop()
-
-print("Texto invertido:", texto_invertido)
-
-
-
 expressao = input("Escreva uma expressão: ")
 pilha_parenteses = Pilha()
 parenteses_validos = True
@@ -57,25 +43,3 @@ if parenteses_validos and pilha_parenteses.is_empty():
     print("VÁLIDO: os parênteses estão equilibrados.")
 else:
     print("INVÁLIDO: os parênteses não estão equilibrados.")
-
-
-numero = int(input("Escreva um número decimal inteiro não negativo: "))
-pilha_binario = Pilha()
-
-if numero < 0:
-    print("O número tem de ser não negativo.")
-elif numero == 0:
-    pilha_binario.push(0)
-else:
-    while numero > 0:
-        resto = numero % 2
-        pilha_binario.push(resto)
-        numero = numero // 2
-
-binario = ""
-while not pilha_binario.is_empty():
-    binario += str(pilha_binario.pop())
-
-if binario:
-    print("Representação binária:", binario)
-    
