@@ -1,0 +1,1 @@
+print("Bom dia ",input("Digite o seu nome completo: "))
